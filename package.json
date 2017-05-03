@@ -1,0 +1,39 @@
+{
+    "name": "msl-stat-calculator",
+    "version": "1.0.0",
+    "description": "Monster Super League - Monster Stats Calculator",
+    "main": "msl-stat-calculator.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maikforte/msl-stat-calculator.git"
+    },
+    "keywords": [
+    "Monster",
+    "Super",
+    "League",
+    "MSL",
+    "MSLGame",
+    "Stats",
+    "Calculator"
+  ],
+    "author": "Michael 'Maik' Ardan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maikforte/msl-stat-calculator/issues"
+    },
+    "homepage": "https://github.com/maikforte/msl-stat-calculator#readme",
+    "dependencies": {
+        "angular": "1.5.8",
+        "angular-animate": "1.5.8",
+        "angular-aria": "1.5.8",
+        "angular-material": "1.1.3",
+        "angular-messages": "1.5.8",
+        "angular-sanitize": "1.5.8",
+        "angular-ui-router": "0.4.2",
+        "ejs": "^2.5.6",
+        "express": "^4.15.2"
+    }
+}
