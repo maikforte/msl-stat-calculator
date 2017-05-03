@@ -1,0 +1,138 @@
+gem-socket {
+    height: 100px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.mf-gem-socket-button-icon {
+    font-size: 70px !important;
+    z-index: 1;
+    color: #EEEEEE;
+    outline: none;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mf-gem-square {
+    height: 100px;
+    width: 100px;
+}
+
+.mf-gem-triangle-container {
+    height: 100px;
+    width: 100px;
+}
+
+.mf-gem-triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 50px 86.6px 50px;
+    border-color: transparent transparent #607D8B transparent;
+    position: absolute;
+}
+
+.mf-gem-diamond-container {
+    height: 100px;
+    width: 100px;
+}
+
+.mf-gem-diamond {
+    position: absolute;
+}
+
+.mf-gem-diamond-content {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: #607D8B;
+    position: relative;
+    top: -50px;
+}
+
+.mf-gem-diamond-content:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: #607D8B;
+}
+
+.mf-gem-shape-switch {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    outline: none;
+}
+
+.mf-gem-shape-switch-icon {
+    font-size: 30px !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mf-gem-tenacity {
+    color: #FF1582;
+}
+
+.mf-gem-fortitude {
+    color: #653D2A;
+}
+
+.mf-gem-ferocity {
+    color: #00A080;
+}
+
+.mf-gem-healing {
+    color: #6D9304;
+}
+
+.mf-gem-conviction {
+    color: #F3A30F;
+}
+
+.mf-gem-protection {
+    color: #E15305;
+}
+
+.mf-gem-life {
+    color: #CA0B09;
+}
+
+.mf-gem-valor {
+    color: #3188FF;
+}
+
+.mf-gem-intuition {
+    color: #7923E4;
+}
+
+.mf-gem-ruin {
+    color: #653D2A;
+}
+
+.mf-gem-vitality {
+    color: #008D05;
+}
+
+.mf-gem-star {
+    color: #FFEB3B;
+}
+
+.mf-gem-star-adjuster {
+    cursor: pointer;
+    outline: none;
+    background-color: #FF9800;
+}

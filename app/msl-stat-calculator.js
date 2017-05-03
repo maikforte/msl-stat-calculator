@@ -1,5 +1,6 @@
 angular.module("MSLStatCalculatorApp", [
     "ngMaterial",
     "ui.router",
-    "HTTPRequester"
+    "HTTPRequester",
+    "StatCalculator"
 ]);

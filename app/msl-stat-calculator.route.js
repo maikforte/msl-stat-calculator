@@ -6,7 +6,8 @@ angular.module("MSLStatCalculatorApp")
         var stateHome = {
             "name": "home",
             "url": "/home",
-            "templateUrl": "./views/home.html"
+            "templateUrl": "./views/stat-calculator.html",
+            "controller": "StatCalculatorController"
         };
 
         var stateAbout = {

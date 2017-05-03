@@ -1,0 +1,44 @@
+<md-dialog layout="column" style="width: 400px;">
+    <div layout="row" layout-align="center center" layout-padding>
+        <span class="md-title">Edit Gem</span>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="close()">
+            <md-icon>
+                close
+            </md-icon>
+        </md-button>
+    </div>
+
+    <md-divider></md-divider>
+
+    <div layout="row" layout-padding>
+        <div flex="30" layout="row" layout-wrap>
+            Pick Gem Set
+            <i class="material-icons mf-gem-tenacity mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-fortitude mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-ferocity mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-healing mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-conviction mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-protection mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-life mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-valor mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-intuition mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-ruin mf-icon">fiber_manual_record</i>
+            <i class="material-icons mf-gem-vitality mf-icon">fiber_manual_record</i>
+        </div>
+
+        <div flex="70" layout="column">
+            <div layout="row" layout-align="none center">
+                <div class="mf-input-question">Grade: </div><i class="material-icons mf-icon mf-gem-star-adjuster" ng-click="updateStar(-1)">keyboard_arrow_left</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 1}">star</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 2}">star</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 3}">star</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 4}">star</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 5}">star</i>
+                <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star == 6}">star</i>
+                <i class="material-icons mf-icon mf-gem-star-adjuster" ng-click="updateStar(1)">keyboard_arrow_right</i>
+            </div>
+        </div>
+    </div>
+
+</md-dialog>

@@ -1,0 +1,31 @@
+ui-view {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mf-nav {
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 10px;
+}
+
+.mf-heading-logo-1 {
+    font-weight: 900;
+}
+
+.mf-heading-logo-2 {
+    font-weight: 200;
+}
+
+.mf-icon {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mf-input-question {
+    padding-right: 10px;
+}

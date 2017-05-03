@@ -1,0 +1,19 @@
+<div layout="row" layout-align="none center" ng-init="shape=1">
+    <div class="mf-gem-shape-switch" md-colors="{background: 'primary'}" layout="column" layout-align="center center" ng-click="shape == 1? shape = 3 : shape = shape - 1">
+        <i class="material-icons mf-gem-shape-switch-icon">keyboard_arrow_left</i>
+    </div>
+
+
+    <gem-square ng-show="shape==1"></gem-square>
+    <gem-triangle ng-show="shape==2"></gem-triangle>
+    <gem-diamond ng-show="shape==3"></gem-diamond>
+
+
+    <div class="mf-gem-shape-switch" md-colors="{background: 'primary'}" layout="column" layout-align="center center" ng-click="shape == 3? shape = 1 : shape = shape + 1">
+        <i class="material-icons mf-gem-shape-switch-icon">keyboard_arrow_right</i>
+    </div>
+</div>
+
+
+
+<md-tooltip md-direction="bottom">Edit Gem</md-tooltip>
