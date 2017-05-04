@@ -1,6 +1,112 @@
 <div>
-    <div layout="column" layout-align="none center" layout-padding>
-        <div layout="row ">
+    <div layout="column" layout-padding>
+        <div layout="row" layout-padding>
+            <div layout="column" flex="50">
+                <div layout="row" layout-align="center">
+                    <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateAstromonStar(-1)">keyboard_arrow_left</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar >= 1}">star</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar >= 2}">star</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar >= 3}">star</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar >= 4}">star</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar >= 5}">star</i>
+                    <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : astromonStar == 6}">star</i>
+                    <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateAstromonStar(1)">keyboard_arrow_right</i>
+                </div>
+
+                <div layout="row" layout-align="center" layout-padding>
+                    <div class="mf-astromon-name">Seastar</div>
+                    <div class="md-body-1">Defender</div>
+                </div>
+            </div>
+
+            <md-divider></md-divider>
+
+            <div layout="column" flex="50">
+                <table>
+                    <tr>
+                        <td class="mf-table-head">
+                            HP
+                        </td>
+                        <td class="mf-base-stat">
+                            20000
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+11000</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Attack
+                        </td>
+                        <td class="mf-base-stat">
+                            1000
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+300</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Defense
+                        </td>
+                        <td class="mf-base-stat">
+                            1000
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+300</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Recovery
+                        </td>
+                        <td class="mf-base-stat">
+                            1000
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+300</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Crit. Dmg
+                        </td>
+                        <td class="mf-base-stat">
+                            50%
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+10%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Crit. Rate
+                        </td>
+                        <td class="mf-base-stat">
+                            10%
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+10%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mf-table-head">
+                            Resistance
+                        </td>
+                        <td class="mf-base-stat">
+                            20%
+                        </td>
+                        <td>
+                            <div class="mf-table-additional-stat">+0%</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <md-divider></md-divider>
+
+        <div layout="row " layout-align="center">
             <gem-socket ng-controller="GemSocketController "></gem-socket>
             <gem-socket ng-controller="GemSocketController "></gem-socket>
             <gem-socket ng-controller="GemSocketController "></gem-socket>

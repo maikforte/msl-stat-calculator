@@ -1,4 +1,4 @@
-<md-dialog layout="column" style="width: 400px;">
+<md-dialog layout="column" style="width: 450px;">
     <div layout="row" layout-align="center center" layout-padding>
         <span class="md-title">Edit Gem</span>
         <span flex></span>
@@ -11,32 +11,52 @@
 
     <md-divider></md-divider>
 
-    <div layout="row" layout-padding>
-        <div flex="30" layout="row" layout-wrap>
-            Pick Gem Set
-            <i class="material-icons mf-gem-tenacity mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-fortitude mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-ferocity mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-healing mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-conviction mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-protection mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-life mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-valor mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-intuition mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-ruin mf-icon">fiber_manual_record</i>
-            <i class="material-icons mf-gem-vitality mf-icon">fiber_manual_record</i>
+    <div layout="row">
+        <div flex="30" layout="column" layout-align="none center" layout-padding>
+            <div class="md-subheader mf-static-subheader" ng-style="{'padding-bottom': '10px'}">
+                GEM SET:
+            </div>
+            <div layout="row" layout-wrap layout-align="center center">
+                <i class="material-icons mf-gem-tenacity mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-fortitude mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-ferocity mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-healing mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-conviction mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-protection mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-life mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-valor mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-intuition mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-ruin mf-icon">fiber_manual_record</i>
+                <i class="material-icons mf-gem-vitality mf-icon">fiber_manual_record</i>
+            </div>
         </div>
 
-        <div flex="70" layout="column">
+        <md-divider></md-divider>
+
+        <div flex="70" layout="column" layout-align="none start" layout-padding>
             <div layout="row" layout-align="none center">
-                <div class="mf-input-question">Grade: </div><i class="material-icons mf-icon mf-gem-star-adjuster" ng-click="updateStar(-1)">keyboard_arrow_left</i>
+                <div class="mf-input-question">Grade: </div>
+                <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateStar(-1);setBaseStat(star, upgrade)">keyboard_arrow_left</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 1}">star</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 2}">star</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 3}">star</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 4}">star</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star >= 5}">star</i>
                 <i class="material-icons mf-icon" ng-class="{'mf-gem-star' : star == 6}">star</i>
-                <i class="material-icons mf-icon mf-gem-star-adjuster" ng-click="updateStar(1)">keyboard_arrow_right</i>
+                <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateStar(1);setBaseStat(star, upgrade)">keyboard_arrow_right</i>
+            </div>
+            <div layout="row" layout-align="none center">
+                <div class="mf-input-question">Upgrade: </div>
+                <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateUpgrade(-1);setBaseStat(star, upgrade)">remove</i>
+                <input type="number" max="15" min="0" ng-model="upgrade" readonly="true">
+                <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="updateUpgrade(1);setBaseStat(star, upgrade)">add</i>
+            </div>
+            <div layout="row" layout-align="none center">
+                <div class="mf-input-question">Main Stat: </div>
+                <i class="material-icons mf-icon mf-edit-gem-mini-button" ng-click="selectMainStat(-1); setBaseStat(star, upgrade)">keyboard_arrow_left</i>
+                <div style="width: 50px; text-align: center;">{{mainStat.label}}</div>
+                <i class=" material-icons mf-icon mf-edit-gem-mini-button " ng-click="selectMainStat(1);setBaseStat(star, upgrade) ">keyboard_arrow_right</i>
+                <div class="mf-additional-stats"> +{{mainStat.stat}}</div>
             </div>
         </div>
     </div>

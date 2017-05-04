@@ -131,8 +131,16 @@ gem-socket {
     color: #FFEB3B;
 }
 
-.mf-gem-star-adjuster {
+.mf-edit-gem-mini-button {
     cursor: pointer;
     outline: none;
     background-color: #FF9800;
+}
+
+.mf-edit-gem-mini-button:hover {
+    background-color: #FFCC00;
+}
+
+.mf-edit-gem-mini-button:active {
+    background-color: #CC9800;
 }

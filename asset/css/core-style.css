@@ -9,12 +9,20 @@ ui-view {
     padding-left: 10px;
 }
 
+.mf-static-subheader {
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .mf-heading-logo-1 {
     font-weight: 900;
 }
 
 .mf-heading-logo-2 {
     font-weight: 200;
+}
+
+.mf-astromon-name {
+    padding-right: 5px;
 }
 
 .mf-icon {
@@ -28,4 +36,39 @@ ui-view {
 
 .mf-input-question {
     padding-right: 10px;
+}
+
+.mf-additional-stats {
+    color: #44AA55;
+    padding-left: 30px;
+}
+
+.mf-table-additional-stat {
+    color: #44AA55;
+}
+
+.mf-base-stat {
+    text-align: right;
+}
+
+.mf-table-head {
+    width: 100px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 0px;
+    height: 50px;
+    /*    border: solid;*/
+    border-width: thin;
+    text-align: left !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
