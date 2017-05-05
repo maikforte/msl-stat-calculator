@@ -32,10 +32,15 @@ angular.module("StatCalculator")
         $scope.init = function () {
             $scope.star = 3;
             $scope.upgrade = 0;
-            $scope.mainStatList = StatCalculatorService.getSquareMainStat();
             $scope.selectedStatIndex = 0;
-            $scope.mainStat = $scope.mainStatList[$scope.selectedStatIndex];
-            $scope.setBaseStat($scope.star, $scope.upgrade);
+            StatCalculatorService.getSquareMainStat().then(function (successResponse) {
+                $scope.mainStatList = successResponse.data;
+                console.log(successResponse.data);
+                $scope.mainStat = $scope.mainStatList[$scope.selectedStatIndex];
+                $scope.setBaseStat($scope.star, $scope.upgrade);
+            }, function (errorResponse) {
+                console.log(errorResponse);
+            });
         };
 
         $scope.updateStar = function (value) {
@@ -65,7 +70,6 @@ angular.module("StatCalculator")
         };
 
         $scope.calculateBaseStatHP = function (star, upgrade) {
-
             StatCalculatorService.getFlatHPGems().then(function (successResponse) {
                 for (var i = 0; i < successResponse.data.length; i++) {
                     if (successResponse.data[i].star == star) {

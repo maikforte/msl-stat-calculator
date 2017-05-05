@@ -48,7 +48,7 @@ ui-view {
 }
 
 .mf-base-stat {
-    text-align: right;
+    text-align: right !important;
 }
 
 .mf-table-head {
@@ -64,7 +64,7 @@ table td {
     height: 50px;
     /*    border: solid;*/
     border-width: thin;
-    text-align: left !important;
+    text-align: left;
 }
 
 input[type=number]::-webkit-inner-spin-button,
